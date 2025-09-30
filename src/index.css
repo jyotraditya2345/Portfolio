@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+@layer base {
+  body {
+    @apply bg-abyss text-gray-100 font-body antialiased;
+    background-image: url('/background%20image.png');
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+
+  ::selection {
+    @apply bg-ember text-abyss;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply max-w-6xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+
+  .rune-card {
+    @apply relative overflow-hidden rounded-3xl border border-oceanLight/40 bg-oceanLight/20 backdrop-blur-md transition-transform duration-500 hover:-translate-y-2 hover:shadow-glow;
+  }
+
+  .rune-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle, rgba(242, 140, 56, 0.18) 0%, rgba(3, 7, 18, 0.4) 60%);
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+  }
+
+  .rune-card:hover::before {
+    opacity: 1;
+  }
+
+  .island-card {
+    @apply relative rounded-3xl border border-oceanLight/40 bg-island-mist shadow-abyss transition-all duration-700 hover:-translate-y-3 hover:shadow-glow;
+  }
+
+  .crew-card {
+    @apply rounded-3xl border border-oceanLight/40 bg-oceanLight/20 backdrop-blur-xl shadow-abyss transition duration-500 hover:-translate-y-2 hover:border-gold/80;
+  }
+
+  .treasure-card {
+    @apply rounded-3xl border border-treasure/50 bg-gradient-to-b from-oceanLight/50 via-abyss/80 to-abyssDeep shadow-abyss;
+  }
+}
+
+@layer utilities {
+  .text-outline {
+    text-shadow: 0 0 10px rgba(1, 4, 13, 0.75);
+  }
+
+  .parallax-bg {
+    background-attachment: fixed;
+  }
+
+  .hero-overlay {
+    background: radial-gradient(circle at 20% 20%, rgba(47, 69, 116, 0.35), transparent 55%), radial-gradient(circle at 80% 0%, rgba(18, 33, 66, 0.5), transparent 60%), linear-gradient(180deg, rgba(3, 7, 18, 0.9) 0%, rgba(3, 7, 18, 0.85) 50%, rgba(1, 4, 13, 0.95) 100%);
+  }
+}
