@@ -148,18 +148,21 @@ const achievements = [
     type: 'Certification',
     blurb:
       'Hands-on certification focused on component systems, state orchestration, and production deployment patterns.',
+    link: 'https://drive.google.com/file/d/1T_oBArpSz-8kV9YGMi_QD_grUZmYRg2G/view',
   },
   {
     name: 'Python – Infosys Springboard',
     type: 'Certification',
     blurb:
       'Credential covering modern Python practices, from asynchronous workflows to data automation.',
+    link: 'https://drive.google.com/file/d/1kbQzKF6V5X5ErYl8_Gz151FFa_kIHUuY/view',
   },
   {
     name: 'Android 14 + Kotlin MasterClass – Udemy',
     type: 'Certification',
     blurb:
       'Masterclass on Android 14, Jetpack Compose, and Kotlin coroutines with production-grade app builds.',
+    link: 'https://www.udemy.com/certificate/UC-1e7cd835-45ca-4bce-ba2b-4d8597aa1108/',
   },
   {
     name: '3rd Place Hack-a-Con Hackathon (IEEE, JUIT)',
@@ -494,6 +497,16 @@ function App() {
                   </h3>
                   <div className="mt-6 h-px w-full bg-gradient-to-r from-transparent via-amber-400/60 to-transparent" />
                   <p className="mt-6 text-sm text-amber-100/80">{achievement.blurb}</p>
+                  {achievement.link ? (
+                    <a
+                      href={achievement.link}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-6 inline-flex items-center text-xs font-semibold uppercase tracking-[0.32em] text-amber-200 transition hover:text-amber-100"
+                    >
+                      View Certificate
+                    </a>
+                  ) : null}
                 </div>
               ))}
             </div>
