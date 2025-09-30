@@ -164,12 +164,6 @@ const achievements = [
       'Masterclass on Android 14, Jetpack Compose, and Kotlin coroutines with production-grade app builds.',
     link: 'https://www.udemy.com/certificate/UC-1e7cd835-45ca-4bce-ba2b-4d8597aa1108/',
   },
-  {
-    name: '3rd Place Hack-a-Con Hackathon (IEEE, JUIT)',
-    type: 'Award',
-    blurb:
-      'Top-three finish for delivering a resilient hackathon prototype under intense cross-functional collaboration.',
-  },
 ]
 
 const ASSET_BASE_URL = import.meta.env.BASE_URL
@@ -502,9 +496,10 @@ function App() {
                       href={achievement.link}
                       target="_blank"
                       rel="noreferrer"
-                      className="mt-6 inline-flex items-center text-xs font-semibold uppercase tracking-[0.32em] text-amber-200 transition hover:text-amber-100"
+                      className="mt-6 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[0.32em] text-amber-200 transition hover:text-amber-100"
                     >
                       View Certificate
+                      <span aria-hidden className="text-base">↗</span>
                     </a>
                   ) : null}
                 </div>
