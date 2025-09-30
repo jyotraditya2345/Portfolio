@@ -644,7 +644,7 @@ function OceanBackdrop() {
 
 function HeroShipVisual() {
   return (
-    <div className="relative max-w-xl rounded-[40px] border border-oceanLight/40 bg-oceanLight/20 p-6 shadow-abyss backdrop-blur-xl">
+    <div className="relative max-w-xl -translate-y-2 rounded-[40px] border border-oceanLight/40 bg-oceanLight/20 p-6 shadow-abyss backdrop-blur-xl md:-translate-y-3 lg:-translate-y-4">
       <div className="relative aspect-[16/10] overflow-hidden rounded-[30px] border border-oceanLight/30 bg-abyss/80">
         <img
           src={SHIP_IMAGE_URL}
