@@ -169,11 +169,12 @@ const achievements = [
   },
 ]
 
-const SHIP_IMAGE_URL = '/Thousand_Sunny_Infobox.webp'
-const SHADOW_MONARCH_IMAGE = '/shadow-monarch.jpeg'
-const BOUNTY_IMAGE = '/one-piece.png'
-const BOUNTY_FLOAT_IMAGE = '/bounty-poster.png'
-const BACKGROUND_IMAGE = '/background image.png'
+const ASSET_BASE_URL = import.meta.env.BASE_URL
+const SHIP_IMAGE_URL = `${ASSET_BASE_URL}Thousand_Sunny_Infobox.webp`
+const SHADOW_MONARCH_IMAGE = `${ASSET_BASE_URL}shadow-monarch.jpeg`
+const BOUNTY_IMAGE = `${ASSET_BASE_URL}one-piece.png`
+const BOUNTY_FLOAT_IMAGE = `${ASSET_BASE_URL}bounty-poster.png`
+const BACKGROUND_IMAGE = `${ASSET_BASE_URL}background image.png`
 
 function App() {
   const aboutRef = useRef(null)
