@@ -542,11 +542,12 @@ function App() {
 }
 
 function ContactCard({ label, value, href }) {
+  const isMailto = href?.startsWith('mailto:')
   return (
     <a
       href={href}
-      target="_blank"
-      rel="noreferrer"
+      target={isMailto ? undefined : '_blank'}
+      rel={isMailto ? undefined : 'noreferrer'}
       className="group flex flex-col gap-2 overflow-hidden rounded-3xl border border-gold/40 bg-abyss/40 p-6 transition hover:border-gold hover:shadow-glow"
     >
       <span className="text-xs uppercase tracking-[0.4em] text-ember/80">{label}</span>
