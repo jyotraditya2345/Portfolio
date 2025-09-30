@@ -644,15 +644,16 @@ function OceanBackdrop() {
 
 function HeroShipVisual() {
   return (
-    <div className="relative max-w-xl overflow-hidden rounded-[32px] border border-gold/50 bg-gradient-to-br from-oceanLight/45 via-abyss/70 to-abyss/90 p-4 shadow-abyss">
-      <div className="relative aspect-[16/10] overflow-hidden rounded-[26px] bg-abyss/80">
+    <div className="relative max-w-xl rounded-[40px] border border-oceanLight/40 bg-oceanLight/20 p-6 shadow-abyss backdrop-blur-xl">
+      <div className="relative aspect-[16/10] overflow-hidden rounded-[30px] border border-oceanLight/30 bg-abyss/80">
         <img
           src={SHIP_IMAGE_URL}
           alt="Thousand Sunny sailing across the hero horizon"
-          className="h-full w-full object-contain"
+          className="h-full w-full object-cover"
           loading="lazy"
         />
       </div>
+      <div className="pointer-events-none absolute inset-0 rounded-[40px] ring-1 ring-inset ring-abyssLight/20" />
     </div>
   )
 }
